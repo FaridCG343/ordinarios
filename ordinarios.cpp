@@ -3,55 +3,52 @@
 using namespace std;
 int ordinario(int n)
 {
-    int num = 0;
     if (n < 10)
     {
-        num = n;
+        return n;
     }
     else if (n < 100)
     {
-        num = 9 + floor(num / 11);
+        return 9 + floor(n / 11);
     }
     else if (n < 1000)
     {
-        num = 18 + floor(num / 111);
+        return 18 + floor(n / 111);
     }
     else if (n < 10000)
     {
-        num = 27 + floor(num / 1111);
+        return 27 + floor(n / 1111);
     }
     else if (n < 100000)
     {
-        num = 36 + floor(num / 11111);
+        return 36 + floor(n / 11111);
     }
     else if (n < 1000000)
     {
-        num = 45 + floor(num / 111111);
+        return 45 + floor(n / 111111);
     }
     else if (n < 10000000)
     {
-        num = 64 + floor(num / 1111111);
+        return 64 + floor(n / 1111111);
     }
     else if (n < 100000000)
     {
-        num = 72 + floor(num / 11111111);
+        return 72 + floor(n / 11111111);
     }
     else if (n < 100000000)
     {
-        num = 81 + floor(num / 111111111);
+        return 81 + floor(n / 111111111);
     }
-
-
-    return num;
 }
 int main(int argc, char const *argv[])
 {
-    int tC, num;
+    int tC, n;
     cin >> tC;
     while (tC--)
     {
-        cin >> num;
-        cout << ordinario(num)<<endl;
+        cin >> n;
+        cout << ordinario(n) << endl;
     }
+
     return 0;
 }
